@@ -1,0 +1,26 @@
+nav {
+    margin-bottom: 10rem;
+    width: min(90%, 1320px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.NavBarMenu {
+    display: flex;
+    flex-direction: row;
+}
+
+.NavBarMenu a {
+    padding: 1rem;
+    text-decoration: none;
+    color: #afafaf;
+}
+.NavBarMenu a:hover {
+    font-weight: 600;
+    color: #afafaf;
+}
+
+.NavBarMenu a li {
+    list-style-type: none;
+}

@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+.explanation {
+  padding: 1rem 3rem;
+  background-color: #3d3d3d;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+}
+
+  /* Slight modification for Bootstrap component */
+
+.menu a{
+  color: #ff0000;
+}
+.menu a:hover{
+  color: #00ff00;
+}
+
+
+.menu a.nav-link.active{
+  color: #0000ff;
+}
+
+nav.menuBg {
+  background: linear-gradient(#888888, #ffffff)!important;
+}
+
+/* NOTE: Adding the tag followed by the class name makes the selector stronger than those from Bootstrap */
