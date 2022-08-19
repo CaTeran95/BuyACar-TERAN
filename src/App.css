@@ -53,7 +53,6 @@
   color: #00ff00;
 }
 
-
 .menu a.nav-link.active{
   color: #0000ff;
 }
@@ -63,3 +62,10 @@ nav.menuBg {
 }
 
 /* NOTE: Adding the tag followed by the class name makes the selector stronger than those from Bootstrap */
+
+nav.menuBg .notificationBalloon {
+  color: black;
+}
+nav.menuBg .notificationBalloon .popNumber{
+  color: wheat;
+}

@@ -1,0 +1,15 @@
+.notificationBalloon {
+    position: relative;
+}
+
+.popNumber {
+    margin: 0;
+    padding: 0.25rem 0.4rem;
+    position: absolute;
+    top: 0;
+    right: -20%;
+    background-color: red;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+}

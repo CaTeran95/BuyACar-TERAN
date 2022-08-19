@@ -11,16 +11,16 @@ nav {
     flex-direction: row;
 }
 
-.NavBarMenu a {
+.NavBarMenu li a {
     padding: 1rem;
     text-decoration: none;
     color: #afafaf;
 }
-.NavBarMenu a:hover {
+.NavBarMenu li a:hover {
     font-weight: 600;
     color: #afafaf;
 }
 
-.NavBarMenu a li {
+.NavBarMenu li {
     list-style-type: none;
 }

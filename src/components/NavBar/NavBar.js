@@ -1,17 +1,21 @@
-import './NavBar.css'
+import { CartWidget } from "../CartWidget/CartWidget";
+import "./NavBar.css";
 
 function NavBar() {
-    return (
-        <nav>
-            <h1>Rent-A-Car</h1>
-            <ul className='NavBarMenu'>
-                <a href="#"><li>Catálogo</li></a>
-                <a href="#"><li>Servicios</li></a>
-                <a href="#"><li>Oficinas</li></a>
-                <a href="#"><li>Contacto</li></a>
-            </ul>
-        </nav>
-    )
+	return (
+		<>
+            <nav>
+				<h1>Rent-A-Car</h1>
+				<ul className="NavBarMenu">
+					<li><a href="#">Catálogo</a></li>
+					<li><a href="#">Servicios</a></li>
+					<li><a href="#">Oficinas</a></li>
+					<li><a href="#">Contacto</a></li>
+				</ul>
+                <CartWidget pop={5}></CartWidget>
+			</nav>
+		</>
+	);
 }
 
 export default NavBar;
