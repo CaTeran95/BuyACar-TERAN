@@ -1,7 +1,10 @@
-import './ItemListContainer.css'
+import "./ItemListContainer.css";
 
-export const ItemListContainer = ({message}) => {
-    return (
-        <p className="message">{message}</p>
-    )
-}
+export const ItemListContainer = ({ message, children }) => {
+	return (
+		<div className="itemListContainer">
+			<p className="message">{message}</p>
+			{children}
+		</div>
+	);
+};

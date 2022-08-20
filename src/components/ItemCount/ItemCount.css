@@ -1,0 +1,35 @@
+.itemCounter {
+    background-color: #c8e8ff;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemCounter .counterControl {
+    padding: 0 0.5rem;
+    margin: 0.5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemCounter .counterControl button {
+    background-color: #fff;
+    line-height: 1rem;
+    border: none;    
+}
+
+.itemCounter .counterControl p {
+    margin: 0;
+}
+
+.itemCounter .addButton {
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    padding: 0.25rem 1rem;
+    border: none;
+    background-color: #18a3ff;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 1.25;
+    border-radius: 0.5rem;
+}

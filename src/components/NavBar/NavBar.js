@@ -1,7 +1,12 @@
+// Importing CartWidget to include it on the NavBar:
 import { CartWidget } from "../CartWidget/CartWidget";
+// Importing component CSS:
 import "./NavBar.css";
 
-function NavBar() {
+// This component gets:
+// POP: Number or message displayed in the red badge. (No badge if is empty)
+// CLEARPOP: Function to manage the cleaning event. If the cart is pressed, product variable in the main App is erased.
+function NavBar({pop, clearPop}) {
 	return (
 		<>
             <nav>
@@ -12,7 +17,7 @@ function NavBar() {
 					<li><a href="#">Oficinas</a></li>
 					<li><a href="#">Contacto</a></li>
 				</ul>
-                <CartWidget pop={5}></CartWidget>
+                <CartWidget pop={pop} clearPop={clearPop}></CartWidget>
 			</nav>
 		</>
 	);
