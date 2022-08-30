@@ -19,8 +19,9 @@
     border: none;    
 }
 
-.itemCounter .counterControl p {
+.itemCounter .counterControl .countingVariable {
     margin: 0;
+    color: #000;
 }
 
 .itemCounter .addButton {

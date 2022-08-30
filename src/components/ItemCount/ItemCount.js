@@ -43,7 +43,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
 					/>
 				</button>
 				{/* Counter display */}
-				<p>{number}</p>
+				<p className="countingVariable">{number}</p>
 				{/* Plus button */}
 				<button onClick={countUp}>
 					<FontAwesomeIcon

@@ -10,14 +10,14 @@ import { ItemCount } from "./components/ItemCount/ItemCount";
 // Importing Bootstrap CSS styles:
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// import logo from './logo.svg';
+import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  // PRODUCTS: State variable for number of items added to the cart.
-  const [products, setProducts] = useState(0);
+	// PRODUCTS: State variable for number of items added to the cart.
+	const [products, setProducts] = useState(0);
 
-  // Method to update number of items in the shopping cart given the counter request:
+	// Method to update number of items in the shopping cart given the counter request:
 	const addToCart = (number) => {
 		setProducts(number + products);
 	};
@@ -31,9 +31,8 @@ function App() {
 						setProducts(0);
 					}}
 				/>
-        <ItemListContainer>
-					<ItemCount stock={15} initial={1} onAdd={addToCart} />
-				</ItemListContainer>
+				<ItemListContainer />
+				<ItemCount stock={15} initial={1} onAdd={addToCart} />
 			</header>
 		</div>
 	);

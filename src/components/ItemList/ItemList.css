@@ -1,0 +1,5 @@
+.itemList {
+    max-width: 85rem;
+    display: flex;
+    flex-flow: row wrap;
+}

@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"title": "Chevrolet Trax",
+		"price": 21400,
+		"pictureUrl": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/vehicles/2022/suvs/trax/01-images/colorizer/01-images/2022-trax-1lt-gb0-colorizer.jpg?imwidth=600"
+	},
+	{
+		"id": 2,
+		"title": "Chevrolet Blazer",
+		"price": 33400,
+		"pictureUrl": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/vehicles/2022/suvs/blazer/01-images/colorizer/v2/2022-blazer-3lt-gsk-colorizer.jpg?imwidth=600"
+	},
+	{
+		"id": 3,
+		"title": "Chevrolet Suburban",
+		"price": 54700,
+		"pictureUrl": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/vehicles/2022/suvs/suburban/new-colorizer/exterior/02-images/2022-suburban-1lz-g1w-colorizer.jpg?imwidth=600"
+	},
+	{
+		"id": 4,
+		"title": "Chevrolet Suburban",
+		"price": 54700,
+		"pictureUrl": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/vehicles/2022/suvs/suburban/new-colorizer/exterior/02-images/2022-suburban-1lz-g1w-colorizer.jpg?imwidth=600"
+	}
+]
