@@ -8,3 +8,10 @@ export const getData = new Promise((resolve, reject) => {
         reject((err) => console.log(err));
     }, 2000)
 });
+
+export const getItem = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(data[0]);
+        reject((err) => console.log(err));
+    }, 3000)
+});

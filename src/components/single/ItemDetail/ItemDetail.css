@@ -1,0 +1,67 @@
+.ItemDetail {
+    max-width: 85rem;
+    padding: 2rem 5rem;
+    position: relative;
+    background: linear-gradient(#182848 0%, #4b6cb7 100%);
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    gap: 2rem;
+    grid-template-areas: 
+        'carPicture carTitle'
+        'carPicture carPrice'
+        'carPicture carDescription'
+        'carPicture carFeatures'
+        'carPicture bookingButton';
+}
+
+.ItemDetail .closeIcon {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.ItemDetail .carPicture {
+    grid-area: carPicture;
+    align-self: center;
+    width: 35rem;
+    padding: 7rem 2rem;
+    background-color: #fff;
+}
+
+.ItemDetail .carTitle {
+    grid-area: carTitle;
+    margin: 0%;
+    font-size: 4rem;
+}
+
+.ItemDetail .carPrice {
+    grid-area: carPrice;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.ItemDetail .carDescription {
+    grid-area: carDescription;
+    margin: 0;
+    font-size: 1.45rem;
+    text-align: left;
+}
+
+.ItemDetail .carFeatures {
+    grid-area: carFeatures;
+    margin: 0 2rem;
+    font-size: 1.45rem;
+    text-align: left;
+}
+
+.ItemDetail .bookingButton {
+    padding: 0.1rem 2rem;
+    background-color: #182848;
+    color: #fff;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    border: none;
+    grid-area: bookingButton;
+}

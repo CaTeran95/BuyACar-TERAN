@@ -42,7 +42,6 @@
 .ItemCard .moreInfoButton, .bookingButton {
     grid-area: moreInfoButton;
     padding: 0.1rem 2rem;
-    /* width: 14rem; */
     background-color: #182848;
     color: #fff;
     align-self: center;

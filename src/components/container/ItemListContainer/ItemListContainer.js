@@ -1,7 +1,7 @@
 // Importing hooks to keep variables and perform duty cycle control:
 import { useEffect, useState } from "react";
 // Importing function that provides information from data base:
-import { getData } from "../../helper/helper";
+import { getData } from "../../../helper/helper";
 // Importing component to list items:
 import { ItemList } from "../ItemList/ItemList";
 
@@ -30,8 +30,8 @@ export const ItemListContainer = ({ message }) => {
 
 	const getCars = async () => {
 		try {
-			const a = await getData;
-			setCars(a);
+			const list = await getData;
+			setCars(list);
 			setLoading(false);
 		} catch (error) {
 			console.log(error);

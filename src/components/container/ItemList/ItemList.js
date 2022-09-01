@@ -1,5 +1,5 @@
 // Importing individual Item:
-import { Item } from "../Item/Item";
+import { Item } from "../../single/Item/Item";
 
 // CSS Import:
 import "./ItemList.css";
@@ -10,9 +10,7 @@ export const ItemList = ({ data }) => {
 			{data.map((item) => (
 				<Item
 					key={item.id}
-					title={item.title}
-					price={item.price}
-					pictureUrl={item.pictureUrl}
+					item={item}
 				/>
 			))}
 		</div>
