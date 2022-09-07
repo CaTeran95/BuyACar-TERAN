@@ -3,10 +3,7 @@ import { useState } from "react";
 // Importing FontAwesome main component to generate icons:
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Importing icons individually:
-import {
-	faSquarePlus,
-	faSquareMinus,
-} from "@fortawesome/free-regular-svg-icons";
+import { faCartPlus, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 // Importing component CSS:
 import "./ItemCount.css";
 
@@ -27,7 +24,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
 
 	// Method to update counter value when user substract one:
 	const countDown = () => {
-		if (number > 0) {
+		if (number > 1) {
 			setNumber(number - 1);
 		}
 	};
@@ -39,7 +36,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
 				<button onClick={countDown}>
 					<FontAwesomeIcon
 						className="button"
-						icon={faSquareMinus}						
+						icon={faMinus}						
 					/>
 				</button>
 				{/* Counter display */}
@@ -48,13 +45,13 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
 				<button onClick={countUp}>
 					<FontAwesomeIcon
 						className="button"
-						icon={faSquarePlus}						
+						icon={faPlus}						
 					/>
 				</button>
 			</div>
 			{/* Button that allows making a request to the main App page */}
 			<button className="addButton" onClick={() => onAdd(number)}>
-				Agregar al carrito
+				<FontAwesomeIcon className="button" icon={faCartPlus} />
 			</button>
 		</div>
 	);

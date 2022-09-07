@@ -1,3 +1,32 @@
+# Buy-me-A-Car
+
+Este portal proporciona herramientas sencillas para la adquisición de vehículos de diferentes marcas y categorías, dispone de información acerca de las características principales de los vehículos y posteriormente se aspira incluir también herramientas para administrar agendas para test drives y cálculo de tasas de interés para adquisición por préstamos. Para este proyecto se ha tomado referencia de otros proyectos realizados por estudiantes de Coderhouse, además de los elementos principales de páginas para la exhibición y promoción de vehículos en Colombia, para marcas como Chevrolet, Kia, Honda, Suzuki y Yamaha.
+
+Este proyecto se desarrolla como parte de los desafíos propuestos para el curso de React JS en Coderhouse. Comenzó como un proyecto para renta de vehículos, pero se ha modificado debido a que una tienda virtual presenta un reto más coherente con las herramientas proporcionadas por el plan de estudios.
+
+El principal objetivo es integrar las funcionalidades que se gestionarán desde el lado del cliente para la navegación y disponer las herramientas e interfaces que se requieren para la interacción con el servidor. Aparte de exhibir la información habitual de una landing page, el portal asume independientemente el trabajo de administrar la comercialización de los items dispuestos en el catálogo.
+
+Para el momento de esta entrega (Septiembre 6 de 2022) sólamente se ha implementado el catálogo, correspondiendo a los requerimientos de la primera entrega parcial.
+
+## Catálogo
+
+El catálogo cuenta con 9 vehículos de dos tipos: Automóviles y SUVs. Cada categoría se puede acceder sin problema por medio de los **enlaces en la barra de navegación** dispuesta en la parte superior de la página. Sólo hace falta posar el cursor por encima para desplegar las opciones. Cada enlace se ha configurado por medio de **React-Router-DOM** para actualizar una página de catálogo donde se filtra el contenido correspondiente a la selección.
+
+## Página de detalle
+
+La sección de detalle se accede para cualquier vehículo cuando se selecciona el item en el catálogo. En ella se muestra información que no aparece en las fichas del catálogo debido a su tamaño, además de la opción de agregar cierta cantidad de items al carrito de compras por medio de un componente ItemCounter, desarrollado y perfeccionado en clase.
+
+## Acceso a la base de datos
+
+Por medio de funciones almacenadas en la carpeta **helper** se ha gestionado la carga de los datos requeridos para el correcto funcionamiento del catálogo, en esta carpeta:
+1. Se almacena la base de datos principal desde donde se importan también las imágenes de los vehículos.
+2. Se simulan las solicitudes a un servidor por medio de **promises** y se suministra la información de la base de datos a los componentes que la requieren para el renderizado.
+
+## Librerías adicionales:
+
+1. React-bootstrap: Se utilizó inicialmente para generar componentes de forma didáctica, pero luego se descartó para crear componentes completamente personalizados.
+2. Fort-awesome: Esta librería se utiliza para importar los íconos del proyecto hacia los componentes, tales como los botones para cerrar ventanas emergentes o para implementar funciones en el carrito de compras.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

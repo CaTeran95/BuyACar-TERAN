@@ -1,12 +1,20 @@
 nav {
-    margin-bottom: 10rem;
+    padding: 2rem 0;
+    margin-bottom: 3rem;
     width: min(90%, 1320px);
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
+.pageLogo a {
+    color: #4b6cb7;
+    text-decoration: none;
+}
+
 .NavBarMenu {
+    position: relative;
     display: flex;
     flex-direction: row;
 }
@@ -14,13 +22,24 @@ nav {
 .NavBarMenu li a {
     padding: 1rem;
     text-decoration: none;
-    color: #afafaf;
+    color: #6a80b3;
 }
 .NavBarMenu li a:hover {
     font-weight: 600;
-    color: #afafaf;
+    color: #fff;
 }
 
 .NavBarMenu li {
     list-style-type: none;
+}
+
+.NavBarMenu .NavBarSubMenu {
+    display: none;
+    padding: 0 1rem;
+    position: absolute;
+    flex-direction: column;
+}
+
+.NavBarMenu li:hover .NavBarSubMenu {
+    display: flex;
 }

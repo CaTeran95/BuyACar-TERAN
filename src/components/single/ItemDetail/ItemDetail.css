@@ -11,7 +11,7 @@
         'carPicture carPrice'
         'carPicture carDescription'
         'carPicture carFeatures'
-        'carPicture bookingButton';
+        'carPicture carCounter';
 }
 
 .ItemDetail .closeIcon {
@@ -54,14 +54,9 @@
     text-align: left;
 }
 
-.ItemDetail .bookingButton {
-    padding: 0.1rem 2rem;
-    background-color: #182848;
-    color: #fff;
-    align-self: center;
-    justify-self: center;
+.ItemDetail .itemCounter {
+    grid-area: carCounter;
+    width: 10rem;
     font-size: 1.5rem;
-    border-radius: 2rem;
-    border: none;
-    grid-area: bookingButton;
+    justify-self: center;
 }
