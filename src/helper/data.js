@@ -21,7 +21,8 @@ export const data = [
 		"price": 21400,
 		"description": "Go the extra mile for style with Trax Special Edition models. The all-black Trax Midnight Edition and the Sport Edition, which is available in a variety of colors, both exude cool confidence with mindful details.",
 		"features": ["18-inch gloss Black aluminum wheels", "All-season blackwall tires", "Black front and rear skid plates", "Front and rear Black bowtie emblems", "Black beltline moldings and door handles"],
-		"pictureUrl": chevroletTrax
+		"pictureUrl": chevroletTrax,
+		"stock": 24
 	},
 	{
 		"id": 2,
@@ -31,7 +32,8 @@ export const data = [
 		"price": 33400,
 		"description": "You'll stand out on every street thanks to its strong stance and sleek body lines, effortless performance comes from a turbocharged 2.0L engine or an available 308-horsepower V6. Includes Chevy Safety Assist too.",
 		"features": ["Sleek and muscular 5-passenger SUV.", "Four models: 2LT, 3LT, RS and Premier.", "4,500 lbs. of maximum towing capability.", "Up to 64.2 cubic feet of maximum cargo space with rear seats folded down.", "Availavle all-wheel drive."],
-		"pictureUrl": chevroletBlazer
+		"pictureUrl": chevroletBlazer,
+		"stock": 15
 	},
 	{
 		"id": 3,
@@ -41,7 +43,8 @@ export const data = [
 		"price": 54700,
 		"description": "The luxurious interior is complemented by generous second- and third-row leg toom your passengers are sure to enjoy. There's also plenty of cargo volume, so you don't have to leave anyone or anything behind.",
 		"features": ["Full-size SUV with multiple seating options.", "Six models: LS, LT, RST, Z71, Premier and High Country.", "Available as 2WD or 4WD (4WD standard on Z71).", "8,300 lbs. of maximum towing capability."],
-		"pictureUrl": chevroletSuburban
+		"pictureUrl": chevroletSuburban,
+		"stock": 8
 	},
 	{
 		"id": 4,
@@ -51,7 +54,8 @@ export const data = [
 		"price": 13350,
 		"description": "No matter how far is the trip, inside Chevrolet Joy your family will be able to take advantage of the comfort of its ample interior space, the temperature and the ease of electriv windows.",
 		"features": ["ABS brakes with EDB.", "Electronic Stability Control.", "1.4L 4I Motor", "Trunk capacity of 500L."],
-		"pictureUrl": chevroletJoySedan
+		"pictureUrl": chevroletJoySedan,
+		"stock": 32
 	},
 	{
 		"id": 5,
@@ -61,7 +65,8 @@ export const data = [
 		"price": 14530,
 		"description": "It comes with a host of features that make it the most innovative of its kind. From its polished exterior to its sporty grille and its 16 inches aluminium wheels, it was made to add more style to every route you decide to take.",
 		"features": ["5 stars safety for Latin NCAP.", "115HP and 160Nm turbo motor.", "Electronic Stability Control.", "Trunk capacity of 470L."],
-		"pictureUrl": chevroletOnix
+		"pictureUrl": chevroletOnix,
+		"stock": 30
 	},
 	{
 		"id": 6,
@@ -71,7 +76,8 @@ export const data = [
 		"price": 22840,
 		"description": "Get behind the wheel of the 2023 Seltos and experience a new breed of SUV. With a suite of confidence-inspiring tech, impressive cargo space, up to 35 MPG, and a bold desig, the 2023 Seltos is highly capable for wherever inspiration takes you.",
 		"features": ["Turbocharged engine with 175hp/195 lb.-ft.", "Class-leading 10.25-inch touchscreen with navigation.", "Heated front seats.", "62.8 cu. ft. of cargo space."],
-		"pictureUrl": kiaSeltos
+		"pictureUrl": kiaSeltos,
+		"stock": 8
 	},
 	{
 		"id": 7,
@@ -81,7 +87,8 @@ export const data = [
 		"price": 16450,
 		"description": "The convention-breaking Rio continues to evolve, packing new technology and smart style into a practical subcompact sedan, all at an affordable price. Take a seat in the Rio’s stylish and spacious cabin, with comfort that’s personalized to you.",
 		"features": ["1.6L Inline 4-cylinder engine.", "Intelligent Variable Automatic Transmission.", "8-inch Touchscreen Display with Rear Camera.", "13.7 cu. ft. of cargo space."],
-		"pictureUrl": kiaRio
+		"pictureUrl": kiaRio,
+		"stock": 26
 	},
 	{
 		"id": 8,
@@ -91,6 +98,7 @@ export const data = [
 		"price": 19490,
 		"description": "The 2023 Forte puts the power in your hands with a bold design, powerful engine options, available manual transmission, and a track-inspired driving experience. Designed with an unmistakable attitude, the Forte's bold look is complete with eye-catching upper and lower grills and a sleek front bumper.",
 		"features": ["1.6L Turbocharged Engine w/ 201 hp.", "Multi-Link Rear Suspension.", "Sport-Tuned Dual Exhaust.", "Available 6-Speed Manual Transmission."],
-		"pictureUrl": kiaForte
+		"pictureUrl": kiaForte,
+		"stock": 27
 	}
 ]

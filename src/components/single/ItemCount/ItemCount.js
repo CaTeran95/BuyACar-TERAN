@@ -50,7 +50,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
 				</button>
 			</div>
 			{/* Button that allows making a request to the main App page */}
-			<button className="addButton" onClick={() => onAdd(number)}>
+			<button className="addButton" onClick={() => {onAdd(number)}}>
 				<FontAwesomeIcon className="button" icon={faCartPlus} />
 			</button>
 		</div>

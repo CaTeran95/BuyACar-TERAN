@@ -10,7 +10,7 @@ import "./NavBar.css";
 // POP: Number or message displayed in the red badge. (No badge if is empty)
 // CLEARPOP: Function to manage the cleaning event. If the cart is pressed, product variable in the main App is erased.
 
-function NavBar({ pop, clearPop }) {
+function NavBar({ productList }) {
 	return (
 		<>
 			<nav>
@@ -21,8 +21,12 @@ function NavBar({ pop, clearPop }) {
 					<li>
 						<NavLink to="/catalog">Catalog</NavLink>
 						<ul className="NavBarSubMenu">
-							<li><Link to="/catalog/category/Car">Cars</Link></li>
-							<li><Link  to="/catalog/category/SUV">SUV</Link></li>
+							<li>
+								<Link to="/catalog/category/Car">Cars</Link>
+							</li>
+							<li>
+								<Link to="/catalog/category/SUV">SUV</Link>
+							</li>
 						</ul>
 					</li>
 					<li>
@@ -35,7 +39,9 @@ function NavBar({ pop, clearPop }) {
 						<NavLink to="/contact">Contact</NavLink>
 					</li>
 				</ul>
-				<CartWidget pop={pop} clearPop={clearPop}></CartWidget>
+				<Link to={"/cart"} className="cartIcon">
+					<CartWidget productList={productList} />
+				</Link>
 			</nav>
 		</>
 	);

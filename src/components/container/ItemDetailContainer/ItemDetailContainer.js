@@ -10,11 +10,11 @@ import { useParams } from "react-router-dom";
 // CSS Import:
 import "./ItemDetailContainer.css";
 
-export const ItemDetailContainer = () => {
+export const ItemDetailContainer = ({ addingItem }) => {
 	// State variables to vehicle information storage and load status:
 	const [car, setCar] = useState({});
 	const [loading, setLoading] = useState(true);
-	
+
 	// Variable where the required item id is saved to get its information:
 	const { id } = useParams();
 
@@ -39,7 +39,10 @@ export const ItemDetailContainer = () => {
 			{loading ? (
 				<p className="message">Loading detail view...</p>
 			) : (
-				<ItemDetail item={car} />
+				<ItemDetail
+					item={car}
+					addingItem={addingItem}
+				/>
 			)}
 		</>
 	);

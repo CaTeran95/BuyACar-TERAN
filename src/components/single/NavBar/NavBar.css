@@ -43,3 +43,7 @@ nav {
 .NavBarMenu li:hover .NavBarSubMenu {
     display: flex;
 }
+
+.cartIcon {
+    color: #fff;
+}

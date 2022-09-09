@@ -4,10 +4,10 @@ import { useState } from "react";
 import NavBar from "./components/single/NavBar/NavBar";
 // Importing Item container for body components:
 import { ItemListContainer } from "./components/container/ItemListContainer/ItemListContainer";
-// Importing Item counter to place orders in the shopping cart:
-// import { ItemCount } from "./components/single/ItemCount/ItemCount";
 // Importing Item Detail Container for body components:
 import { ItemDetailContainer } from "./components/container/ItemDetailContainer/ItemDetailContainer";
+// Importing Item Cart Container for body components:
+import { ItemCartContainer } from "./components/container/ItemCartContainer/ItemCartContainer";
 // Importing React-Route-DOM to navigate:
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -19,32 +19,26 @@ import "./App.css";
 
 function App() {
 	// PRODUCTS: State variable for number of items added to the cart.
-	const [products, setProducts] = useState(0);
+	const [products, setProducts] = useState([]);
 
 	// Method to update number of items in the shopping cart given the counter request:
-	const addToCart = (number) => {
-		setProducts(number + products);
+	const addingItem = (item) => {
+		const newProductArray = [...products, item]
+		setProducts(newProductArray);
 	};
 
 	return (
 		<BrowserRouter>
 			<div className="App">
 				<header className="App-header">
-					<NavBar
-						pop={products}
-						clearPop={() => {
-							setProducts(0);
-						}}
-					/>
+					<NavBar productList={products}/>
 					<Routes>
 						<Route path="/" element={<ItemListContainer />}/>
 						<Route path="/catalog" element={<ItemListContainer />}/>
 						<Route path="/catalog/category/:category" element={<ItemListContainer />}/>
-						<Route path="/item/:id" element={<ItemDetailContainer />}/>
+						<Route path="/item/:id" element={<ItemDetailContainer addingItem={addingItem}/>}/>
+						<Route path="/cart" element={<ItemCartContainer productList={products} />}/>
 					</Routes>
-					{/* <ItemListContainer /> */}
-					{/* <ItemCount stock={15} initial={1} onAdd={addToCart} /> */}
-					{/* <ItemDetailContainer /> */}
 				</header>
 			</div>
 		</BrowserRouter>
