@@ -6,11 +6,7 @@ import { NavLink, Link } from "react-router-dom";
 // Importing component CSS:
 import "./NavBar.css";
 
-// This component gets:
-// POP: Number or message displayed in the red badge. (No badge if is empty)
-// CLEARPOP: Function to manage the cleaning event. If the cart is pressed, product variable in the main App is erased.
-
-function NavBar({ productList }) {
+function NavBar() {
 	return (
 		<>
 			<nav>
@@ -40,7 +36,7 @@ function NavBar({ productList }) {
 					</li>
 				</ul>
 				<Link to={"/cart"} className="cartIcon">
-					<CartWidget productList={productList} />
+					<CartWidget />
 				</Link>
 			</nav>
 		</>

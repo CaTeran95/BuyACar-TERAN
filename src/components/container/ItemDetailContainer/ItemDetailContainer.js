@@ -10,7 +10,7 @@ import { useParams } from "react-router-dom";
 // CSS Import:
 import "./ItemDetailContainer.css";
 
-export const ItemDetailContainer = ({ addingItem }) => {
+export const ItemDetailContainer = () => {
 	// State variables to vehicle information storage and load status:
 	const [car, setCar] = useState({});
 	const [loading, setLoading] = useState(true);
@@ -39,10 +39,7 @@ export const ItemDetailContainer = ({ addingItem }) => {
 			{loading ? (
 				<p className="message">Loading detail view...</p>
 			) : (
-				<ItemDetail
-					item={car}
-					addingItem={addingItem}
-				/>
+				<ItemDetail item={car} />
 			)}
 		</>
 	);

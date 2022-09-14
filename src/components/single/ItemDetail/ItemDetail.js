@@ -5,28 +5,57 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 // Importing hook to go back to the catalog from the detail:
 import { useNavigate, Link } from "react-router-dom";
 
+import { useState } from "react";
+
+import { useContext } from "react";
+
 import { ItemCount } from "../ItemCount/ItemCount";
+import { CartContext } from "../../../context/CartContext";
 
 // CSS Import:
 import "./ItemDetail.css";
-import { useState } from "react";
 
-export const ItemDetail = ({ item, addingItem }) => {
-    // State variable to set the purchase buttons:
-    const [completed, setCompleted] = useState(false);
-    
+export const ItemDetail = ({ item }) => {
+	
+	const { addItem } = useContext(CartContext);
+
+	// State variable to set the purchase buttons:
+	const [completed, setCompleted] = useState(false);
+
 	// Destructuring the car information:
-	const { id, category, brand, title, description, features, price, pictureUrl, stock } = item;
+	const {
+		id,
+		category,
+		brand,
+		title,
+		description,
+		features,
+		price,
+		pictureUrl,
+		stock,
+	} = item;
 	// Declaring function to navigate backwards:
 	const navigate = useNavigate();
 
-    // Function used to create an object to push into the cartProductList:
-    const onAdd = (quantity) => {
-        setCompleted(true);
-        addingItem({id, category, brand, title, price, pictureUrl, stock, quantity});
+	// Function used to create an object to push into the cartProductList:
+	const onAdd = (quantity) => {
+		setCompleted(true);
+		addItem(
+			{
+				id,
+				category,
+				brand,
+				title,
+				price,
+				pictureUrl,
+				stock,
+				quantity,
+			},
+			quantity
+		);
 	};
-	
-    return (
+
+	return (
 		<div id={id} className="ItemDetail">
 			{/* Close button icon to link backwards */}
 			<FontAwesomeIcon
@@ -46,23 +75,25 @@ export const ItemDetail = ({ item, addingItem }) => {
 					})
 				}
 			</ul>
-            <div className="cartWidget">
-                {
-                    !completed ? (
-                        <ItemCount
-                            className="itemCounter"
-                            stock={stock}
-                            initial={1}
-                            onAdd={onAdd}
-                        />
-                    ) : (
-                        <>
-                            <Link to={'/cart'} className='cartWidgetButton'>Go to the cart</Link>
-                            <Link to={'/catalog'} className='cartWidgetButton'>Keep buying</Link>
-                        </>
-                    )
-                }
-            </div>
+			<div className="cartWidget">
+				{!completed ? (
+					<ItemCount
+						className="itemCounter"
+						stock={stock}
+						initial={1}
+						onAdd={onAdd}
+					/>
+				) : (
+					<>
+						<Link to={"/cart"} className="cartWidgetButton">
+							Go to the cart
+						</Link>
+						<Link to={"/catalog"} className="cartWidgetButton">
+							Keep buying
+						</Link>
+					</>
+				)}
+			</div>
 		</div>
 	);
 };

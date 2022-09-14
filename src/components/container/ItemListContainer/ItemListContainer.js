@@ -9,7 +9,7 @@ import { ItemList } from "../ItemList/ItemList";
 // CSS Import:
 import "./ItemListContainer.css";
 
-export const ItemListContainer = ({ message }) => {
+export const ItemListContainer = () => {
 	// State variables to vehicle information storage and load status:
 	const [cars, setCars] = useState([]);
 	const [loading, setLoading] = useState(true);
@@ -48,7 +48,6 @@ export const ItemListContainer = ({ message }) => {
 
 	return (
 		<div className="itemListContainer">
-			{message && <p className="message">{message}</p>}
 			{loading ? (
 				<p className="message">Loading...</p>
 			) : (
