@@ -46,6 +46,7 @@ export const ItemDetail = ({ item }) => {
 				category,
 				brand,
 				title,
+				description,
 				price,
 				pictureUrl,
 				stock,

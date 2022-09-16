@@ -1,3 +1,51 @@
-.carImage {
-    width: 10rem;
+.itemCart {
+    background: linear-gradient(#182848 0%, #4b6cb7 100%);
+}
+
+.itemCartDetail {
+    padding: 1rem;
+    position: relative;
+	display: flex;
+    gap: 2rem;
+}
+
+.itemCartDetail .itemCartPicture {
+	width: 20rem;
+    height: 20rem;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.itemCartDetail .itemInfo {
+    height: 20rem;
+    display: flex;
+    font-size: 1.25rem;
+    flex-direction: column;
+    justify-items: flex-start;
+    text-align: left;
+}
+
+.itemCartDetail .itemInfo .mainInfo{
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.itemCartDetail .deleteButton {
+	display: none;
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	background-color: #f59d9d;
+	color: #fff;
+	width: 3rem;
+	height: 3rem;
+	border: none;
+	border-radius: 50%;
+}
+
+.itemCart:hover .deleteButton {
+	display: block;
+}
+
+.itemCartDetail .deleteButton:hover {
+	background-color: #f00;
 }

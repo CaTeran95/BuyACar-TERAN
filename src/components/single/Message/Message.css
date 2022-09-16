@@ -1,0 +1,22 @@
+.message {
+    padding: 2rem;
+    width: min(90vw, 85rem);
+}
+
+.message img {
+    width: 30rem;
+    filter: invert(39%) sepia(15%) saturate(1902%) hue-rotate(184deg) brightness(101%) contrast(90%);
+}
+
+.message .messageText {
+    margin: 2rem 0;
+    font-size: 3rem;
+}
+
+.message .messageButton {
+    padding: 0.5rem 3rem;
+    background-color: #4b6cb7;
+    color: #fff;
+    border: none;
+    border-radius: 3rem;
+}

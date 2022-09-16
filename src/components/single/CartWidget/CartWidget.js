@@ -14,13 +14,15 @@ import "./CartWidget.css";
 // POP: Number or message displayed in the red badge. (No badge if is empty)
 // CLEARPOP: Function to manage the cleaning event. If the cart is pressed, product variable in the main App is erased.
 export const CartWidget = () => {
-	const { products } = useContext(CartContext);
+	const { numberOfProducts } = useContext(CartContext);
+
+	const balloon = numberOfProducts();
 
 	return (
 		<div className="notificationBalloon">
 			<FontAwesomeIcon icon={faCartShopping} />
 			{/* Conditional display, only shows badge when pop is greater than 0 */}
-			{products.length > 0 && <p className="popNumber">{products.length}</p>}
+			{balloon > 0 && <p className="popNumber">{balloon}</p>}
 		</div>
 	);
 };

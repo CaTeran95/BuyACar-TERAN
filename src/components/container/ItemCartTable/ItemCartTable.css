@@ -1,0 +1,20 @@
+.cartTable {
+    width: min(90vw, 85rem);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.tableRow {
+    margin: 1rem;
+    background-color: #4b6cb7;
+    display: grid;
+    grid-template-columns: 5fr repeat(3, 1fr);
+    border-radius: 1rem;
+    align-items: center;
+}
+
+.tableRow p {
+    margin: 0;
+}
