@@ -2,10 +2,12 @@
 import { useEffect, useState } from "react";
 // Importing the Item Detail component to show vehicle information:
 import { ItemDetail } from "../../single/ItemDetail/ItemDetail";
-// Importing function that provides information from data base:
-import { getItem } from "../../../helper/helper";
 // Importing hook from ReactRouterDOM to manage dynamic routes:
 import { useParams } from "react-router-dom";
+// Importing methods to access database from Firebase:
+import { doc, getDoc } from 'firebase/firestore';
+// Importing DB initialization:
+import { db } from "../../../utils/firebase";
 
 // CSS Import:
 import "./ItemDetailContainer.css";
@@ -18,20 +20,19 @@ export const ItemDetailContainer = () => {
 	// Variable where the required item id is saved to get its information:
 	const { id } = useParams();
 
-	// Async function to manage the mocked server answer promise:
-	const getCar = async () => {
-		try {
-			const item = await getItem(id);
-			setCar(item);
-			setLoading(false);
-		} catch (error) {
-			console.log(`There was an error ${error}`);
-		}
-	};
+	// GETTING ITEM INFORMATION FROM FIREBASE:
+
+	const getItem = async () => {
+		const queryRef = doc(db, 'Cars', id);
+		const data = await getDoc(queryRef);
+		const item = {...data.data() ,id: data.id};
+		setCar(item);
+		setLoading(false);
+	}
 
 	// Life cycle control to get vehicle information at first page load:
 	useEffect(() => {
-		getCar();
+		getItem();
 	}, []);
 
 	return (
