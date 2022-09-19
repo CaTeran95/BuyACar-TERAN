@@ -5,7 +5,7 @@ import { ItemDetail } from "../../single/ItemDetail/ItemDetail";
 // Importing hook from ReactRouterDOM to manage dynamic routes:
 import { useParams } from "react-router-dom";
 // Importing methods to access database from Firebase:
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc } from "firebase/firestore";
 // Importing DB initialization:
 import { db } from "../../../utils/firebase";
 
@@ -23,12 +23,16 @@ export const ItemDetailContainer = () => {
 	// GETTING ITEM INFORMATION FROM FIREBASE:
 
 	const getItem = async () => {
-		const queryRef = doc(db, 'Cars', id);
-		const data = await getDoc(queryRef);
-		const item = {...data.data() ,id: data.id};
-		setCar(item);
-		setLoading(false);
-	}
+		try {
+			const queryRef = doc(db, "Cars", id);
+			const data = await getDoc(queryRef);
+			const item = { ...data.data(), id: data.id };
+			setCar(item);
+			setLoading(false);
+		} catch (error) {
+			console.log('There was an error: ', error);
+		}
+	};
 
 	// Life cycle control to get vehicle information at first page load:
 	useEffect(() => {
