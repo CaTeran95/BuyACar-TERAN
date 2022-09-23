@@ -11,22 +11,10 @@ export default function ItemCartTable() {
   
     return (
     <div className='cartTable'>
-        <div className='tableRow'>
-            <p>Item details</p>
-            <p>Quantity</p>
-            <p>Unit price</p>
-            <p>Total price</p>
-        </div>
         <div className='tableBody'>
             {
                 products.map((product, index) => <ItemCart key={index} item={product} />)
             }
-        </div>
-        <div className='tableRow'>
-            <p>Total</p>   
-            <p>{numberOfProducts()}</p>
-            <p></p>
-            <p>$ {getTotalPrice()}</p>
         </div>
     </div>
   )

@@ -14,6 +14,7 @@ import { CartProvider } from "./context/CartContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 // CSS Import:
 import "./App.css";
+import Message from "./components/single/Message/Message";
 
 function App() {
 	return (
@@ -29,13 +30,18 @@ function App() {
 								path="/catalog/category/:category"
 								element={<ItemListContainer />}
 							/>
+							<Route path="/item/:id" element={<ItemDetailContainer />} />
+							<Route path="/cart" element={<ItemCartContainer />} />
 							<Route
-								path="/item/:id"
-								element={<ItemDetailContainer />}
-							/>
-							<Route
-								path="/cart"
-								element={<ItemCartContainer />}
+								path="*"
+								element={
+									<Message
+										imgSource="https://www.svgrepo.com/show/137549/construction-excavator.svg"
+										message="Looks like there is nothing by here."
+										buttonText="Go back home"
+										buttonLink="/"
+									/>
+								}
 							/>
 						</Routes>
 					</header>

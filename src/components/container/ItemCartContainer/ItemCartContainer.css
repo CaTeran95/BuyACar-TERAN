@@ -1,20 +1,12 @@
+.stage {
+    display: flex;
+    flex-direction: row;
+}
+
 .itemCartContainer {
     /* background-color: #fff; */
     display: flex;
     flex-direction: column;
-}
-
-.clearCartButton {
-    padding: 0.1rem 2rem;
-    margin-bottom: 2rem;
-    background-color: #4b6cb7;
-    color: #fff;
-    align-self: flex-end;
-    /* justify-self: center; */
-    font-size: 1.5rem;
-    border-radius: 2rem;
-    border: none;
-
 }
 
 table td {

@@ -18,7 +18,7 @@ export const CartProvider = ({ children }) => {
 		for (const product of products) {
 			totalCart += product.quantity * product.price;
 		}
-		return totalCart.toLocaleString("en-US");
+		return totalCart;
 	};
 
 	const isInCart = (itemId) => {

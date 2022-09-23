@@ -14,7 +14,10 @@
 }
 
 .itemCounter .counterControl button {
+    margin: 0;
+    padding: 0.25rem;
     background-color: #fff;
+    color: #000;
     line-height: 1.75rem;
     font-size: 1.25rem;
     border: none;    
@@ -35,6 +38,7 @@
 .itemCounter .addButton {
     /* margin: 0 0.5rem 0.5rem 0.5rem; */
     padding: 0.25rem 1.25rem 0.25rem 1rem;
+    margin: 0;
     border: none;
     background-color: #18a3ff;
     color: #ffffff;

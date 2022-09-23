@@ -15,8 +15,10 @@ export const Item = ({ item }) => {
 				<p className="carTitle">{`${brand} ${title}`}</p>
 				<p className="carPrice">${price.toLocaleString("en-US")}</p>
 				{/* Buttons for Booking and Detail options */}
-				<button className="moreInfoButton">Information</button>
-				<button className="bookingButton">Booking</button>
+				<div className="cardButtons">
+					<button className="moreInfoButton">Information</button>
+					<button className="bookingButton">Booking</button>
+				</div>
 			</div>
 		</Link>
 	);

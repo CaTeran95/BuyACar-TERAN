@@ -11,7 +11,7 @@ import './ItemCart.css'
 export const ItemCart = ({item}) => {
 	const {removeItem} = useContext(CartContext)
 
-	const { id, pictureUrl, brand, title, description, quantity, price } = item;
+	const { id, pictureUrl, brand, title, quantity, price } = item;
 	return (
 		<div className='tableRow itemCart'>
             <div className="itemCartDetail">
@@ -19,13 +19,12 @@ export const ItemCart = ({item}) => {
 				<div className="itemInfo">
 					<p className="itemBrand mainInfo"><strong>Brand:</strong> {brand}</p>
 					<p className="itemModel mainInfo"><strong>Model:</strong> {title}</p>
-					<p className="itemDescription">{description}</p>
+					<p className="itemModel mainInfo"><strong>Quantity:</strong> {quantity}</p>
+					{/* <p className="itemDescription">{description}</p> */}
 				</div>
 				<button className="deleteButton"><FontAwesomeIcon icon={faXmark} onClick={() => {removeItem(id)}} /></button>
 			</div>
-            <p>{quantity}</p>
-            <p>$ {price.toLocaleString('en-US')}</p>
-            <p>$ {(quantity * price).toLocaleString('en-US')}</p>
+            <p className="itemPrice">$ {price.toLocaleString('en-US')}</p>
         </div>
 	);
 };

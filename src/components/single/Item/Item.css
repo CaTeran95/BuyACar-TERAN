@@ -6,14 +6,8 @@
     margin: 1rem;
     padding: 1rem;
     background: linear-gradient(#182848 0%, #4b6cb7 100%);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 7fr 1fr 1fr 1fr;
-    grid-template-areas: 
-        'carPicture carPicture'
-        'carTitle carTitle'
-        'carPrice carPrice'
-        'bookingButton moreInfoButton';
+    border-radius: 1rem;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
@@ -23,26 +17,26 @@
     grid-area: carPicture;
     margin: 0.75rem;
     width: 22rem;
+    border-radius: 1rem;
     background-color: #fff;
 }
 
 .ItemCard .carTitle, .carPrice {
-    margin: 0;
+    margin-bottom: 0.5rem;
     grid-area: carTitle;
     color: #fff;
     font-size: 1.5rem;
     text-align: start;
 }
 
-.ItemCard .carTitle {
-    grid-area: carTitle;
+.ItemCard .cardButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
 
-.ItemCard .carPrice {
-    grid-area: carPrice;
-}
-
-.ItemCard .moreInfoButton, .bookingButton {
+.ItemCard .cardButtons button{
+    margin: 0;
     grid-area: moreInfoButton;
     padding: 0.1rem 2rem;
     background-color: #182848;
