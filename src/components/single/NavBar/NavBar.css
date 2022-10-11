@@ -1,7 +1,7 @@
 nav {
     padding: 2rem 0;
     margin-bottom: 3rem;
-    width: min(90%, 1320px);
+    width: min(90%, 85rem);
     /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
@@ -24,9 +24,11 @@ nav {
     text-decoration: none;
     color: #6a80b3;
 }
+
 .NavBarMenu li a:hover {
-    font-weight: 600;
+    font-weight: 400;
     color: #fff;
+    backdrop-filter: blur(1);
 }
 
 .NavBarMenu li {
@@ -34,14 +36,17 @@ nav {
 }
 
 .NavBarMenu .NavBarSubMenu {
-    display: none;
-    padding: 0 1rem;
     position: absolute;
+    display: none;
+    align-items: center;
+    padding: 0 1rem;
     flex-direction: column;
 }
 
 .NavBarMenu li:hover .NavBarSubMenu {
     display: flex;
+    align-items: flex-start;
+    background-color: #454545be;
 }
 
 .cartIcon {

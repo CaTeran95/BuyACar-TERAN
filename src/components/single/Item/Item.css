@@ -1,57 +1,70 @@
 .ItemLink {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .ItemCard {
-    margin: 1rem;
-    padding: 1rem;
-    background: linear-gradient(#182848 0%, #4b6cb7 100%);
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
+	padding: 0.75rem;
+	background-color: #182848;
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-items: center;
 }
 
-.ItemCard .carPicture {
-    grid-area: carPicture;
-    margin: 0.75rem;
-    width: 22rem;
-    border-radius: 1rem;
-    background-color: #fff;
+.ItemCard:hover {
+	background: linear-gradient(#182848 65%, #4b6cb7 100%);
+	transform: scale(1.025);
+	transition: 1s;
 }
 
-.ItemCard .carTitle, .carPrice {
-    margin-bottom: 0.5rem;
-    grid-area: carTitle;
-    color: #fff;
-    font-size: 1.5rem;
-    text-align: start;
+.ItemCard .cardPicture {
+	padding: 0 1rem;
+	margin-bottom: 0.5rem;
+	grid-area: carPicture;
+	width: 18rem;
+	background-color: #fff;
 }
 
-.ItemCard .cardButtons {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+.ItemCard .cardBottom {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
 }
 
-.ItemCard .cardButtons button{
-    margin: 0;
-    grid-area: moreInfoButton;
-    padding: 0.1rem 2rem;
-    background-color: #182848;
-    color: #fff;
-    align-self: center;
-    justify-self: center;
-    font-size: 1.5rem;
-    border-radius: 2rem;
-    border: none;
+.ItemCard .cardBottom .cardLogo {
+	border-radius: 0.25rem;
 }
 
-.ItemCard .moreInfoButton {
-    grid-area: moreInfoButton;
+.ItemCard .cardBottom .cardInfo {
+	margin-left: 0.5rem;
+	color: #fff;
+	font-size: 1rem;
+	text-align: start;
 }
 
-.ItemCard .bookingButton {
-    grid-area: bookingButton;
+.cardInfo p {
+    max-width: 195px;
+    white-space: nowrap; 
+    overflow: clip;
+	margin-bottom: 0;
+}
+
+/* .ItemCard .cardBottom {
+} */
+
+.ItemCard .cardBottom .moreInfoButton {
+	margin-left: auto;
+	width: 2rem;
+	height: 2rem;
+	background-color: #4b6cb7;
+	color: #fff;
+	align-self: center;
+	font-size: 1rem;
+	border-radius: 2rem;
+	border: none;
+}
+
+.ItemCard:hover .moreInfoButton {
+	border: 0.2px white solid;
 }

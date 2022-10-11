@@ -9,6 +9,7 @@ import { ItemCartContainer } from "./components/container/ItemCartContainer/Item
 
 // Importing cart context provider:
 import { CartProvider } from "./context/CartContext";
+import { InfoProvider } from "./context/InfoContext";
 
 // Importing Bootstrap CSS styles:
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -19,34 +20,36 @@ import Message from "./components/single/Message/Message";
 function App() {
 	return (
 		<BrowserRouter>
-			<CartProvider>
-				<div className="App">
-					<header className="App-header">
-						<NavBar />
-						<Routes>
-							<Route path="/" element={<ItemListContainer />} />
-							<Route path="/catalog" element={<ItemListContainer />} />
-							<Route
-								path="/catalog/category/:category"
-								element={<ItemListContainer />}
-							/>
-							<Route path="/item/:id" element={<ItemDetailContainer />} />
-							<Route path="/cart" element={<ItemCartContainer />} />
-							<Route
-								path="*"
-								element={
-									<Message
-										imgSource="https://www.svgrepo.com/show/137549/construction-excavator.svg"
-										message="Looks like there is nothing by here."
-										buttonText="Go back home"
-										buttonLink="/"
-									/>
-								}
-							/>
-						</Routes>
-					</header>
-				</div>
-			</CartProvider>
+			<InfoProvider>
+				<CartProvider>
+					<div className="App">
+						<header className="App-header">
+							<NavBar />
+							<Routes>
+								<Route path="/" element={<ItemListContainer />} />
+								<Route path="/catalog" element={<ItemListContainer />} />
+								<Route
+									path="/catalog/:filter/:value"
+									element={<ItemListContainer />}
+								/>
+								<Route path="/item/:id" element={<ItemDetailContainer />} />
+								<Route path="/cart" element={<ItemCartContainer />} />
+								<Route
+									path="*"
+									element={
+										<Message
+											imgSource="https://www.svgrepo.com/show/137549/construction-excavator.svg"
+											message="Looks like there is nothing by here."
+											buttonText="Go back home"
+											buttonLink="/"
+										/>
+									}
+								/>
+							</Routes>
+						</header>
+					</div>
+				</CartProvider>
+			</InfoProvider>
 		</BrowserRouter>
 	);
 }
