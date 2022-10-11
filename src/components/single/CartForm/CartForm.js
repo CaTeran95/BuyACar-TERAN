@@ -1,22 +1,25 @@
-import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 
 import "./CartForm.css";
 
 export const CartForm = ({ submitOrder }) => {
 	const userFormData = (e) => {
+		console.log(e);
 		let userData = {};
 		for (let index = 0; index < e.target.length - 1; index++) {
 			userData = { ...userData, [e.target[index].id]: e.target[index].value };
 		}
+		console.log(userData);
 		submitOrder(userData);
 	};
 
 	return (
 		<Form
 			className="CartForm"
+			id="CartForm"
 			onSubmit={(e) => {
 				e.preventDefault();
 				userFormData(e);
@@ -68,7 +71,6 @@ export const CartForm = ({ submitOrder }) => {
 					<Form.Control placeholder="Country" required />
 				</Form.Group>
 			</Row>
-			{/* <Button type="submit">Place order</Button> */}
 		</Form>
 	);
 };

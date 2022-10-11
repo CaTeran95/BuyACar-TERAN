@@ -11,7 +11,7 @@ function NavBar() {
 		<>
 			<nav>
 				<h1 className="pageLogo">
-					<NavLink to="/">Buy-Me-A-Car</NavLink>
+					<NavLink to="/">Buy-A-Car</NavLink>
 				</h1>
 				<ul className="NavBarMenu">
 					<li>
@@ -21,7 +21,10 @@ function NavBar() {
 								<Link to="/catalog/category/Car">Cars</Link>
 							</li>
 							<li>
-								<Link to="/catalog/category/SUV">SUV</Link>
+								<Link to="/catalog/category/SUV">SUVs</Link>
+							</li>
+							<li>
+								<Link to="/catalog/category/Motorcycle">Motorcycles</Link>
 							</li>
 						</ul>
 					</li>

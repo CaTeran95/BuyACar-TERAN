@@ -1,22 +1,26 @@
+// Importing React Hooks:
+import { useState, useContext } from "react";
+
 // Importing FontAwesome main component to generate icons:
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Importing icons individually:
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+
 // Importing hook to go back to the catalog from the detail:
 import { useNavigate, Link } from "react-router-dom";
 
-import { useState } from "react";
-
-import { useContext } from "react";
 
 import { ItemCount } from "../ItemCount/ItemCount";
+
 import { CartContext } from "../../../context/CartContext";
+import { InfoContext } from "../../../context/InfoContext";
 
 // CSS Import:
 import "./ItemDetail.css";
 
-export const ItemDetail = ({ item }) => {
-	
+export const ItemDetail = () => {
+	const { itemDetail } = useContext(InfoContext);
+
 	const { addItem } = useContext(CartContext);
 
 	// State variable to set the purchase buttons:
@@ -33,7 +37,7 @@ export const ItemDetail = ({ item }) => {
 		price,
 		pictureUrl,
 		stock,
-	} = item;
+	} = itemDetail;
 	// Declaring function to navigate backwards:
 	const navigate = useNavigate();
 

@@ -14,7 +14,7 @@ import "./ItemCartContainer.css";
 export const ItemCartContainer = () => {
 	const { products, clear, getTotalPrice } = useContext(CartContext);
 
-	const [order, setOrder] = useState('')
+	const [order, setOrder] = useState("");
 
 	const [stage, setStage] = useState("shoppingCart");
 
@@ -22,7 +22,8 @@ export const ItemCartContainer = () => {
 		const queryRef = collection(db, "Orders");
 		const orderNumber = await addDoc(queryRef, order);
 		setOrder(orderNumber.id);
-		console.log("orderNumber", orderNumber.id);
+		setStage("orderConfirmation");		
+		clear();
 	};
 
 	const submitOrder = (buyer) => {
@@ -30,24 +31,13 @@ export const ItemCartContainer = () => {
 			buyer: buyer,
 			items: products,
 			date: Timestamp.now().toDate(),
-			total: getTotalPrice(),
+			total: getTotalPrice() * 1.19,
 		};
 		sendOrder(order);
 		console.log(order);
-		clear();
 	};
 
-	const getFormInfo = () => {
-		const cartForm = document.querySelectorAll(".CartForm input");
-		let buyer = {};
-		for (const input of cartForm) {
-			buyer = { ...buyer, [input.id]: input.value };
-		}
-		console.log(buyer);
-		submitOrder(buyer);
-	};
-
-	if (products.length == 0 && stage != 'orderConfirmation') {
+	if (products.length == 0 && stage != "orderConfirmation") {
 		return (
 			<div>
 				<Message
@@ -84,16 +74,14 @@ export const ItemCartContainer = () => {
 				return (
 					<div className="stage">
 						<div className="itemCartContainer">
-							<CartForm />
+							<CartForm submitOrder={submitOrder} />
 						</div>
 						<div>
 							<OrderSummary>
 								<button
 									className="orderButton"
-									onClick={() => {
-										setStage("orderConfirmation");
-										getFormInfo();
-									}}
+									form="CartForm"
+									type="submit"
 								>
 									Place order
 								</button>
@@ -112,53 +100,4 @@ export const ItemCartContainer = () => {
 				);
 		}
 	}
-
-	// return (
-	<div>
-		{products.length == 0 ? (
-			<Message
-				imgSource="https://www.svgrepo.com/show/17356/empty-cart.svg"
-				message="Oops, looks like your shopping cart is empty."
-				buttonText="Go to catalog"
-				buttonLink="/catalog"
-			></Message>
-		) : (
-			<>
-				<div className="stage">
-					<div className="itemCartContainer">
-						{stage == "shoppingCart" ? (
-							<ItemCartTable />
-						) : (
-							<CartForm submitOrder={submitOrder} />
-						)}
-					</div>
-					<div>
-						<OrderSummary>
-							{stage == "shoppingCart" ? (
-								<button
-									className="orderButton"
-									onClick={() => {
-										setStage("shippingAddress");
-									}}
-								>
-									Select shipping address
-								</button>
-							) : (
-								<button
-									className="orderButton"
-									onClick={() => {
-										getFormInfo();
-										setStage("orderConfirmation");
-									}}
-								>
-									Place order
-								</button>
-							)}
-						</OrderSummary>
-					</div>
-				</div>
-			</>
-		)}
-	</div>;
-	// );
 };

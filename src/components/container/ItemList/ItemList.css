@@ -1,5 +1,8 @@
 .itemList {
+    padding: 1rem;
     max-width: 85rem;
     display: flex;
+    justify-content: center;
     flex-flow: row wrap;
+    gap: 1rem;
 }
